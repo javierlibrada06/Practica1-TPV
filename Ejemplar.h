@@ -3,18 +3,21 @@
 
 using namespace std;
 
-enum Tipo {
-	libro,
-	audiovisual,
-	juego
-};
-class Ejemplar
+
+struct Ejemplar
 {
-private:
-	Tipo tipo;
+	enum Tipo {
+		libro,
+		audiovisual,
+		juego
+	};
+
 	int codigo;
+	Tipo tipo;
 	string nombre;
-public:
-	Ejemplar(int, Tipo, string);
+	
 };
+
+Ejemplar();
+istream& operator>> (istream&, Ejemplar&);
 

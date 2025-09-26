@@ -12,7 +12,17 @@ private:
 	int usuario;
 	//Date fecha;
 public: 
+	Prestamo();
 	Prestamo(Ejemplar*, Date, int);
+	Ejemplar getEjemplar();
+	Date getFecha();
+	int getUsuario() const;
+	Date getDevolucion() const;
+
+	void leerPrestamo(const Catalogo&, istream&);
+	bool operator<(const Prestamo&) const;
+
+
 
 };
 

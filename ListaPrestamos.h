@@ -12,5 +12,8 @@ private:
 
 public: 
 	ListaPrestamos(const Catalogo&, istream&);
+	~ListaPrestamos();
+	void ordenar();
+	void mostrar(ostream&)
 };
 

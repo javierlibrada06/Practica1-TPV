@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Prestamo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|solutionrelative:Prestamo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|C:\\Users\\julia\\source\\repos\\Practica1-TPV\\ListaPrestamos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|solutionrelative:ListaPrestamos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Ejemplar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|solutionrelative:Ejemplar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Catalogo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B6DD91BC-8EAE-45A0-8F7E-2242B95130DA}|Practica1.vcxproj|solutionrelative:Catalogo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -17,25 +29,64 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaPrestamos.h",
+              "DocumentMoniker": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\ListaPrestamos.h",
+              "RelativeDocumentMoniker": "ListaPrestamos.h",
+              "ToolTip": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\ListaPrestamos.h",
+              "RelativeToolTip": "ListaPrestamos.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-23T22:19:06.924Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Prestamo.h",
+              "DocumentMoniker": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Prestamo.h",
+              "RelativeDocumentMoniker": "Prestamo.h",
+              "ToolTip": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Prestamo.h",
+              "RelativeToolTip": "Prestamo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-23T22:17:31.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ejemplar.h",
+              "DocumentMoniker": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Ejemplar.h",
+              "RelativeDocumentMoniker": "Ejemplar.h",
+              "ToolTip": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Ejemplar.h",
+              "RelativeToolTip": "Ejemplar.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-23T22:10:00.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Catalogo.h",
               "DocumentMoniker": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Catalogo.h",
               "RelativeDocumentMoniker": "Catalogo.h",
               "ToolTip": "C:\\Users\\julia\\source\\repos\\Practica1-TPV\\Catalogo.h",
               "RelativeToolTip": "Catalogo.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-23T22:05:56.979Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },

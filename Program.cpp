@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
+#include "Ejemplar.h"
+#include "Catalogo.h"
 
-int main()
+int Main(int argc, char* argv[])
 {
-    std::cout << "Hello World!\n";
+	Ejemplar ejemplar;
+	cin >> ejemplar;
+	return 0;
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
