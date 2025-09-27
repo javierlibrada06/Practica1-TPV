@@ -1,7 +1,7 @@
 #pragma once
+#include <istream>
 #include <string>
 
-using namespace std;
 
 
 struct Ejemplar
@@ -14,10 +14,12 @@ struct Ejemplar
 
 	int codigo;
 	Tipo tipo;
-	string nombre;
+	std::string nombre;
+
+public: 
+	Ejemplar();
 	
 };
 
-Ejemplar();
-istream& operator>> (istream&, Ejemplar&);
-
+std::istream& operator>> (std::istream&, Ejemplar&);
+void LeerEjemplar(Ejemplar);

@@ -2,15 +2,32 @@
 #include <iostream>
 using namespace std;
 
-Ejemplar();
-
-istream& operator>>(istream& s, Ejemplar& ejemplar)
+// Sobrecarga del operador >>
+/*
+* Al usar entradaDeTexto >> Elemento crea un nuevo ejemplar en la dirección ejemplar
+* Y rellena los argumentos - Código, Tipo, Nombre
+*/
+istream& operator>>(istream& entrada, Ejemplar& ejemplar)
 {
-	cin >> ejemplar.codigo;
+	entrada >> ejemplar.codigo;
 	char c;
-	cin >> c;
-	if (c == 'A') ejemplar.tipo = audiovisual;
-	else if (c == 'J')ejemplar.tipo = juego;
-	else if (c == 'L')ejemplar.tipo = libro;
-	cin >> ejemplar.nombre;
+	entrada >> c; 
+	if (c == 'A') ejemplar.tipo = Ejemplar::audiovisual;
+	else if (c == 'J')ejemplar.tipo = Ejemplar::juego;
+	else if (c == 'L')ejemplar.tipo = Ejemplar::libro;
+	getline(entrada, ejemplar.nombre);
+
+	return entrada;
+}
+
+// Constructor de ejemplar vacio
+Ejemplar::Ejemplar() : codigo(0), tipo(libro), nombre("") {};
+
+// Método auxiliar para comprobar que el catálogo y sus ejemplares se guardan correctamente
+void LeerEjemplar(Ejemplar ejemplar) {
+	cout << ejemplar.codigo << " ";
+	if (ejemplar.tipo == Ejemplar::libro) cout << "Libro" << " ";
+	else if(ejemplar.tipo == Ejemplar::audiovisual) cout << "Audiovisual" << " ";
+	else if(ejemplar.tipo == Ejemplar::juego) cout << "Juego" << " ";
+	cout << ejemplar.nombre << " " << endl;
 }

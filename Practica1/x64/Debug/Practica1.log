@@ -1,0 +1,5 @@
+﻿  Catalogo.cpp
+  Ejemplar.cpp
+  Generando código...
+Catalogo.obj : error LNK2019: símbolo externo "public: __cdecl Ejemplar::Ejemplar(void)" (??0Ejemplar@@QEAA@XZ) sin resolver al que se hace referencia en la función "public: __cdecl Catalogo::Catalogo(class std::basic_istream<char,struct std::char_traits<char> > &)" (??0Catalogo@@QEAA@AEAV?$basic_istream@DU?$char_traits@D@std@@@std@@@Z)
+C:\Users\julia\Source\Repos\Practica1-TPV\x64\Debug\Practica1.exe : fatal error LNK1120: 1 externos sin resolver

@@ -4,20 +4,32 @@
 
 using namespace std;
 
-Catalogo catalogo(istream&) 
-
+// Constructor de la clase Catalogo a través de una entrada de texto
+// (El método main del Program.cpp, busca el fichero "catalogo.txt")
+Catalogo::Catalogo(istream& fichero) 
 {
-	size_t tam;
-	cin >> tam;
+		fichero >> numElems;
+	
+		elems = new Ejemplar[numElems]; // Inicializa un array dinamico de Ejemplares
+	
+		for (size_t i =0; i < numElems; i++) 
+		{ 
+			fichero >> elems[i];
+		}
+}
 
-	Ejemplar elems[tam];
+// Destructor de Catalogo (elimina elems)
+Catalogo::~Catalogo() {
+	delete[] elems;
+}
 
-	catalogo = 
 
-	for (int i = 0; i < tam; i++) { // Si no hay entrada lanza excepcion (Problemas para Javi y Julia del futuro) Animoooo!!!
-
-
+// Método auxiliar para depurar la inicialización del catalogo
+void Catalogo::LeerCatalogo()
+{
+	for (size_t i = 0; i < numElems; ++i)
+	{
+		LeerEjemplar(elems[i]);
 	}
-
 }
 

@@ -19,7 +19,7 @@ public:
 	int getUsuario() const;
 	Date getDevolucion() const;
 
-	void leerPrestamo(const Catalogo&, istream&);
+	//void leerPrestamo(const Catalogo&, std::istream&);
 	bool operator<(const Prestamo&) const;
 
 
