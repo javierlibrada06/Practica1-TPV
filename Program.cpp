@@ -23,6 +23,10 @@ int main()
 	{
 		Catalogo catalogo = Catalogo(input);
 		catalogo.LeerCatalogo();
+		cout << endl;
+		Ejemplar* ej = catalogo.buscarEjemplar(1202);
+		LeerEjemplar(*ej);
+		//cout << ej->codigo << ", " << ej->tipo << ", " << ej->nombre;
 	}
 	input.close();
 	
