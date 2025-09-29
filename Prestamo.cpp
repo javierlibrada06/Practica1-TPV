@@ -3,6 +3,27 @@
 #include <iostream>
 using namespace std;
 
+ostream& operator<<(ostream& salida, Prestamo& prestamo)
+{
+	salida << prestamo.getEjemplar().codigo;
+	salida << prestamo.getFecha();
+	salida << prestamo.getUsuario();
+
+	return salida;
+}
+
+Prestamo::Prestamo() : ejemplar(), fecha(0, 0, 0), usuario(0) {};
+
+void Prestamo::leerPrestamo(const Catalogo& catalogo, istream& entrada)
+{
+	Catalogo cat = catalogo;
+	int i;
+	entrada >> i;
+	ejemplar = cat.buscarEjemplar(i);
+	entrada >> fecha;
+	entrada >> usuario;
+}
+
 Ejemplar Prestamo::getEjemplar() { return *ejemplar; };
 int Prestamo::getUsuario() const { return usuario; };
 Date Prestamo::getFecha() { return fecha; };

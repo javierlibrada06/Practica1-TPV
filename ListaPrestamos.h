@@ -3,8 +3,6 @@
 #include "Catalogo.h"
 class ListaPrestamos
 {
-	//elems: Prestamo*
-	//numElems : size_t
 
 private:
 	size_t numElems;
