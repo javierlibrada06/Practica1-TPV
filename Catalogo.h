@@ -11,7 +11,7 @@ public:
 	Catalogo(std::istream&);
 	~Catalogo();
 
-	Ejemplar buscaEjemplar(int);
+	Ejemplar* buscarEjemplar(int);
 
 	//Método auxiliar para comprobar que se lee el txt
 	void LeerCatalogo(); 

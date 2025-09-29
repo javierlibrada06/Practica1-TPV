@@ -33,3 +33,31 @@ void Catalogo::LeerCatalogo()
 	}
 }
 
+Ejemplar* Catalogo::buscarEjemplar(int i) 
+{
+	int izq = 0;
+	int der = numElems - 1;
+	int medio = izq + (der-izq)/2;
+	//medio = izq +(der-izq)/2 
+	bool encontrado = false;
+	Ejemplar* ejBuscado;
+	while (!encontrado)
+	{
+		if (i < elems[medio].codigo)
+		{
+			der = medio-1;
+		}
+		else if (i > elems[medio].codigo)
+		{
+			izq = medio + 1;
+		}
+		else if (i == elems[medio].codigo)
+		{
+			ejBuscado = &elems[medio];
+			encontrado = true;
+			return ejBuscado;
+		}
+	}
+	return nullptr;
+}
+
