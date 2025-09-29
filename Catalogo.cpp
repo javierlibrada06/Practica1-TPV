@@ -46,10 +46,12 @@ Ejemplar* Catalogo::buscarEjemplar(int i)
 		if (i < elems[medio].codigo)
 		{
 			der = medio-1;
+			 medio = izq + (der - izq) / 2;
 		}
 		else if (i > elems[medio].codigo)
 		{
 			izq = medio + 1;
+			 medio = izq + (der - izq) / 2;
 		}
 		else if (i == elems[medio].codigo)
 		{
