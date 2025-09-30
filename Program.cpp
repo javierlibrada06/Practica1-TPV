@@ -1,36 +1,48 @@
-// Practica1.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
+// Main
 
 // Headers
+#include "checkML.h"
 #include "Ejemplar.h"
 #include "Catalogo.h"
+#include "ListaPrestamos.h"
+#include "Prestamo.h"
+#include "Date.hpp"
 
-// Others
+// Otros
 #include <iostream>
 #include <fstream>
 #include <string>
+//#include <windows.h>
 
 using namespace std;
 
 // Método principal provisional
-// Escribe en consola el catálogo creado
 int main()
 {
-	ifstream input;
-	input.open("catalogo.txt");
-	if (!input.is_open()) cout << "No se encuentra el fichero" << endl;
+
+	//SetConsoleOutputCP(CP_UTF8);
+
+	ifstream inputCatalogo;
+	inputCatalogo.open("catalogo.txt");
+	if (!inputCatalogo.is_open()) cout << "No se encuentra el fichero" << endl;
 	else 
 	{
-		Catalogo catalogo = Catalogo(input);
-		catalogo.LeerCatalogo();
-		cout << endl;
-		Ejemplar* ej = catalogo.buscarEjemplar(1202);
-		LeerEjemplar(*ej);
-		//cout << ej->codigo << ", " << ej->tipo << ", " << ej->nombre;
-	}
-	input.close();
-	
-	
+		Catalogo catalogo (inputCatalogo);
 
+		inputCatalogo.close();
+
+		ifstream inputPrestamo;
+		inputPrestamo.open("prestamos.txt");
+		if (!inputPrestamo.is_open()) cout << "No se encuentra el fichero" << endl;
+		else
+		{
+			ListaPrestamos lista (catalogo, inputPrestamo);
+			lista.ordenar();
+			ofstream outfile("salida.txt");
+			lista.mostrar(outfile);
+		}
+
+		inputPrestamo.close();
+	}
 	return 0;
 }

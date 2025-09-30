@@ -1,12 +1,16 @@
-#pragma once
+﻿#pragma once
 #include "Ejemplar.h"
 #include "Catalogo.h"
 #include "Date.hpp"
+#include "checkML.h"
+
+using namespace std;
 class Prestamo
 {
-	Ejemplar* ejemplar;
-	int usuario;
+	Ejemplar* ejemplar;;
 	Date fecha;
+	int usuario;
+
 public: 
 	Prestamo();
 	Prestamo(Ejemplar*, Date, int);
@@ -17,9 +21,8 @@ public:
 	Date getDevolucion() const;
 
 	void leerPrestamo(const Catalogo&, std::istream&);
-	bool operator<(const Prestamo&) const;
-
-
+	friend bool operator<(const Prestamo&, const Prestamo&);
+	friend ostream& operator<<(ostream&, Prestamo&);
 
 };
 

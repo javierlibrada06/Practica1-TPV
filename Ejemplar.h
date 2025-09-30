@@ -2,8 +2,6 @@
 #include <istream>
 #include <string>
 
-
-
 struct Ejemplar
 {
 	enum Tipo {
@@ -18,8 +16,9 @@ struct Ejemplar
 
 public: 
 	Ejemplar();
-	
 };
 
 std::istream& operator>> (std::istream&, Ejemplar&);
+
+//Método Auxiliar (imprime ejemplar en consola) - Comprobar la creación de Catalogo
 void LeerEjemplar(Ejemplar);

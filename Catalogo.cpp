@@ -1,16 +1,20 @@
+Ôªø//Headers
+#include "checkML.h"
 #include "Catalogo.h"
 #include "Ejemplar.h"
+
+//Otros
 #include <iostream>
 
 using namespace std;
 
-// Constructor de la clase Catalogo a travÈs de una entrada de texto
-// (El mÈtodo main del Program.cpp, busca el fichero "catalogo.txt")
+// Constructor de la clase Catalogo a trav√©s de una entrada de texto
+// (El m√©todo main del Program.cpp, busca el fichero "catalogo.txt")
 Catalogo::Catalogo(istream& fichero) 
 {
 		fichero >> numElems;
 	
-		elems = new Ejemplar[numElems]; // Inicializa un array dinamico de Ejemplares
+		elems = new Ejemplar[numElems]; // Inicializa un array din√°mico de Ejemplares
 	
 		for (size_t i =0; i < numElems; i++) 
 		{ 
@@ -23,43 +27,38 @@ Catalogo::~Catalogo() {
 	delete[] elems;
 }
 
+// Busqueda binaria para encontrar el ejmeplar en el catalogo
+Ejemplar* Catalogo::buscarEjemplar(int i) const
+{
+    int izq = 0;
+    int der = numElems - 1;
 
-// MÈtodo auxiliar para depurar la inicializaciÛn del catalogo
+    while (izq <= der) 
+    {
+        int medio = izq + (der - izq) / 2;
+
+        if (i < elems[medio].codigo) 
+        {
+            der = medio - 1;
+        } 
+        else if (i > elems[medio].codigo) 
+        {
+            izq = medio + 1;
+        } 
+        else  // encontrado
+        {
+            return &elems[medio];
+        }
+    }
+
+    return nullptr; // no encontrado
+}
+
+// M√©todo auxiliar para depurar la inicializaci√≥n del catalogo
 void Catalogo::LeerCatalogo()
 {
-	for (size_t i = 0; i < numElems; ++i)
-	{
-		LeerEjemplar(elems[i]);
-	}
+    for (size_t i = 0; i < numElems; ++i)
+    {
+        LeerEjemplar(elems[i]);
+    }
 }
-
-Ejemplar* Catalogo::buscarEjemplar(int i) 
-{
-	int izq = 0;
-	int der = numElems - 1;
-	int medio = izq + (der-izq)/2;
-	//medio = izq +(der-izq)/2 
-	bool encontrado = false;
-	Ejemplar* ejBuscado;
-	while (!encontrado)
-	{
-		if (i < elems[medio].codigo)
-		{
-			der = medio-1;
-			 medio = izq + (der - izq) / 2;
-		}
-		else if (i > elems[medio].codigo)
-		{
-			izq = medio + 1;
-			 medio = izq + (der - izq) / 2;
-		}
-		else if (i == elems[medio].codigo)
-		{
-			ejBuscado = &elems[medio];
-			encontrado = true;
-			return ejBuscado;
-		}
-	}
-	return nullptr;
-}
-

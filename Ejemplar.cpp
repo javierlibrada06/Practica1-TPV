@@ -1,11 +1,16 @@
+Ôªø//Headers
+#include "checkML.h"
 #include "Ejemplar.h"
+#include "checkML.h"
+
+//Otros
 #include <iostream>
 using namespace std;
 
 // Sobrecarga del operador >>
 /*
-* Al usar entradaDeTexto >> Elemento crea un nuevo ejemplar en la direcciÛn ejemplar
-* Y rellena los argumentos - CÛdigo, Tipo, Nombre
+* Al usar entradaDeTexto >> Elemento crea un nuevo ejemplar en la direcci√≥n ejemplar
+* Y rellena los argumentos - C√≥digo, Tipo, Nombre
 */
 istream& operator>>(istream& entrada, Ejemplar& ejemplar)
 {
@@ -23,16 +28,11 @@ istream& operator>>(istream& entrada, Ejemplar& ejemplar)
 // Constructor de ejemplar vacio
 Ejemplar::Ejemplar() : codigo(0), tipo(libro), nombre("") {};
 
-// MÈtodo auxiliar para comprobar que el cat·logo y sus ejemplares se guardan correctamente
+// M√©todo auxiliar para comprobar que el cat√°logo y sus ejemplares se guardan correctamente
 void LeerEjemplar(Ejemplar ejemplar) {
 	cout << ejemplar.codigo << " ";
 	if (ejemplar.tipo == Ejemplar::libro) cout << "Libro" << " ";
 	else if(ejemplar.tipo == Ejemplar::audiovisual) cout << "Audiovisual" << " ";
 	else if(ejemplar.tipo == Ejemplar::juego) cout << "Juego" << " ";
 	cout << ejemplar.nombre << " " << endl;
-}
-
-// MÈtodo auxiliar para escribir el nombre del ejemplar
-void NombreEjemplar(Ejemplar ejemplar, string& nombre) {
-	nombre = ejemplar.nombre;
 }

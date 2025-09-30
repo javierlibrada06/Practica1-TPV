@@ -1,5 +1,6 @@
-#pragma once
+﻿#pragma once
 #include "Ejemplar.h"
+
 #include <istream>
 
 class Catalogo
@@ -11,8 +12,8 @@ public:
 	Catalogo(std::istream&);
 	~Catalogo();
 
-	Ejemplar* buscarEjemplar(int);
+	Ejemplar* buscarEjemplar(int) const;
 
-	//M�todo auxiliar para comprobar que se lee el txt
+	//Método auxiliar para comprobar Lectura del archivo .txt
 	void LeerCatalogo(); 
 };
