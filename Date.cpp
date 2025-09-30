@@ -22,7 +22,7 @@ Date::Date() {
 }
 
 Date::Date(int d, int m, int y)
- : day(d), month(m), year(y) {
+	: day(d), month(m), year(y) {
 	if (!correctDate())
 		throw "Invalid date"s;
 }
@@ -31,11 +31,11 @@ Date& Date::operator++() {
 	day++;
 
 	// Pasa de mes
-	if (day > daysInMonth(month, year)){
+	if (day > daysInMonth(month, year)) {
 		day = 1;
 		month++;
 		// Pasa de año
-		if (month > 12){
+		if (month > 12) {
 			month = 1;
 			year++;
 		}
@@ -61,8 +61,8 @@ Date Date::operator+(int n) const {
 bool Date::operator<(const Date& date) const {
 	// Orden lexicográfico
 	return (year < date.year ||
-	       (year == date.year && (month < date.month ||
-	                             (month == date.month && day < date.day))));
+		(year == date.year && (month < date.month ||
+			(month == date.month && day < date.day))));
 }
 
 
@@ -87,14 +87,14 @@ int Date::daysInMonth(int month, int year) {
 	int numDays = 0;
 
 	switch (month) {
-		case 4: case 6: case 9: case 11:
-			numDays = 30;
-			break;
-		case 2:
-			numDays = leapYear(year) ? 29 : 28;
-			break;
-		default:
-			numDays = 31;
+	case 4: case 6: case 9: case 11:
+		numDays = 30;
+		break;
+	case 2:
+		numDays = leapYear(year) ? 29 : 28;
+		break;
+	default:
+		numDays = 31;
 	}
 
 	return numDays;
@@ -106,16 +106,16 @@ bool Date::leapYear(int year) {
 
 bool Date::correctDate() const {
 	return year >= 0
-	       && month >= 1 && month <= 12
-	       && day >= 1 && day <= daysInMonth(month, year);
+		&& month >= 1 && month <= 12
+		&& day >= 1 && day <= daysInMonth(month, year);
 }
 
-istream& operator>>(istream& in, Date& d){
+istream& operator>>(istream& in, Date& d) {
 	char c;
 	return (in >> d.day >> c >> d.month >> c >> d.year);
 }
 
-ostream& operator<<(ostream& out, const Date& d){
+ostream& operator<<(ostream& out, const Date& d) {
 	out << format("{:0>2}/{:0>2}/{:0>2}", d.day, d.month, d.year);
 	return out;
 }

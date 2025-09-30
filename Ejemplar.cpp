@@ -31,3 +31,8 @@ void LeerEjemplar(Ejemplar ejemplar) {
 	else if(ejemplar.tipo == Ejemplar::juego) cout << "Juego" << " ";
 	cout << ejemplar.nombre << " " << endl;
 }
+
+// Método auxiliar para escribir el nombre del ejemplar
+void NombreEjemplar(Ejemplar ejemplar, string& nombre) {
+	nombre = ejemplar.nombre;
+}
